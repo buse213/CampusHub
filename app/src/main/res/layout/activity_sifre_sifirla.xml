@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Şifremi Sıfırla"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#8A2BE2"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-posta adresinizi girin, size bir şifre sıfırlama bağlantısı gönderelim."
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/editSifirlaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="E-posta Adresiniz"
+        android:textColorHint="#757575"
+        android:textColor="#212121"
+        android:background="@drawable/edittext_bg"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSifreSifirla"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Sıfırlama Maili Gönder"
+        android:backgroundTint="#8A2BE2"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+# Android Studio & Gradle
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.idea/
+
+# Build & Output
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.dex
+
+# OS Generated
+.DS_Store
+Thumbs.db
+
+# Log & Temporary
+*.log

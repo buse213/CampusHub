@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5DDD5"> <!-- WhatsApp arka plan rengine yakın -->
+
+    <!-- ÜST BAR (HEADER) - YENİ EKLENDİ -->
+    <RelativeLayout
+        android:id="@+id/layout_ust_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8A2BE2"
+        android:elevation="4dp"
+        android:paddingHorizontal="8dp">
+
+        <ImageButton
+            android:id="@+id/btnGeri"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Geri"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtSohbetBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btnGeri"
+            android:layout_marginStart="8dp"
+            android:text="Mesajlaşma"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- MESAJ LİSTESİ - layout_below eklendi -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_ust_bar"
+        android:layout_above="@+id/layout_gonder"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- MESAJ GÖNDERME ALANI -->
+    <LinearLayout
+        android:id="@+id/layout_gonder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="8dp">
+
+        <EditText
+            android:id="@+id/etMesaj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Mesaj yazın..."
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:maxLines="4" />
+
+        <ImageButton
+            android:id="@+id/btnGonder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="#8A2BE2" />
+    </LinearLayout>
+
+</RelativeLayout>

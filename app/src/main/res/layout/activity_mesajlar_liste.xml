@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <!-- Üst Başlık ve Geri Butonu Paneli -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="#8A2BE2"> <!-- CampusHub Moru -->
+
+        <ImageButton
+            android:id="@+id/btnGeriMesajlar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Geri"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mesajlarım"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Liste artık başlığın altında başlayacak -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMesajListesi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Liste boşsa bu yazı görünecek -->
+    <TextView
+        android:id="@+id/txtBosListeUyarisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Henüz bir mesajınız yok."
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:textColor="#666666" />
+
+</RelativeLayout>

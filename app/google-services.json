@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807378192001",
+    "project_id": "campushub-49b7c",
+    "storage_bucket": "campushub-49b7c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807378192001:android:db3e76f4c9656fbbfaaf80",
+        "android_client_info": {
+          "package_name": "com.busenurcam.campushub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBay7NWYuwBncbP6xQu38PPpVseQgnt_6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
