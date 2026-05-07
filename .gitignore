@@ -25,3 +25,4 @@ Thumbs.db
 
 # Log & Temporary
 *.log
+app/google-services.json
