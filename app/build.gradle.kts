@@ -18,9 +18,17 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
 
-        // local.properties dosyasından anahtarı okur ve Manifest'e gönderir
-        val mapsKey: String = gradleLocalProperties(rootDir, providers).getProperty("MAPS_API_KEY") ?: ""
+        // local.properties dosyasından anahtarları okur
+        val properties = gradleLocalProperties(rootDir, providers)
+        val mapsKey: String = properties.getProperty("MAPS_API_KEY") ?: ""
+        val imgbbKey: String = properties.getProperty("IMGBB_API_KEY") ?: ""
+
+        // Manifest için (Google Maps)
         manifestPlaceholders["MAPS_API_KEY"] = mapsKey
+
+        // Java kodundan BuildConfig.MAPS_API_KEY ve BuildConfig.IMGBB_API_KEY olarak erişmek için:
+        buildConfigField("String", "MAPS_API_KEY", "\"$mapsKey\"")
+        buildConfigField("String", "IMGBB_API_KEY", "\"$imgbbKey\"")
     }
 
     buildTypes {
@@ -32,6 +40,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    // BuildConfig sınıfının otomatik oluşmasını sağlayan kritik blok
+    buildFeatures {
+        buildConfig = true
     }
 }
 
